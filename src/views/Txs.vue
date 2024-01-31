@@ -2,13 +2,13 @@
   <div class="layout">
     <a-breadcrumb class="breadcrumb">
       <a-breadcrumb-item>
-        <router-link to="/">首页</router-link>
+        <router-link to="/">Home</router-link>
       </a-breadcrumb-item>
-      <a-breadcrumb-item>交易列表</a-breadcrumb-item>
+      <a-breadcrumb-item>Transaction List</a-breadcrumb-item>
     </a-breadcrumb>
     <div class="card txs">
-      <p class="title">交易列表</p>
-      <p>当前已产出交易数量 {{latestTxCount}}</p>
+      <p class="title">Transaction List</p>
+      <p>The current number of transactions produced is {{latestTxCount}}</p>
       <a-table
         :columns="columns"
         :rowKey="record => record.height"
@@ -56,32 +56,32 @@ export default class Txs extends Vue {
   // table columns
   private columns = [
     {
-      title: '所属块高',
+      title: 'Block Height',
       dataIndex: 'block_height',
       scopedSlots: { customRender: 'height' },
     },
     {
-      title: '地址',
+      title: 'Address',
       dataIndex: 'address',
       scopedSlots: { customRender: 'cutHash' },
     },
     {
-      title: '哈希',
+      title: 'Hash',
       dataIndex: 'hash',
       scopedSlots: { customRender: 'toHash' },
     },
 
     {
-      title: '交易类型',
+      title: 'Transaction Type',
       dataIndex: 'type',
     },
     {
-      title: '交易原始数据',
+      title: 'Transaction Raw Data',
       dataIndex: 'tx',
       scopedSlots: { customRender: 'raw' },
     },
     {
-      title: '时间',
+      title: 'Time',
       dataIndex: 'timestamp_human',
       scopedSlots: { customRender: 'date' },
     },

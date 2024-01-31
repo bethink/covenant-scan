@@ -2,36 +2,36 @@
   <div class="layout">
     <a-breadcrumb class="breadcrumb">
       <a-breadcrumb-item>
-        <router-link to="/">首页</router-link>
+        <router-link to="/">Home</router-link>
       </a-breadcrumb-item>
-      <a-breadcrumb-item>区块详情</a-breadcrumb-item>
+      <a-breadcrumb-item>Block Details</a-breadcrumb-item>
     </a-breadcrumb>
     <div class="card">
       <p class="title">
-        <span>交易：{{transaction.hash}}</span>
+        <span>Transaction：{{transaction.hash}}</span>
         <a-icon v-if="loading" slot="indicator" type="loading" style="font-size: 16px" spin/>
       </p>
       <div class="content">
         <div class="row">
-          <label class="label">所属块高</label>
+          <label class="label">Block Height</label>
           <div class="data">#{{transaction.block_height}}</div>
         </div>
         <div class="row">
-          <label class="label">所属块哈希</label>
+          <label class="label">Block Hash</label>
           <div class="data">
             <router-link :to="'/block/' + transaction.block_hash">{{transaction.block_hash}}</router-link>
           </div>
         </div>
         <div class="row">
-          <label class="label">时间</label>
+          <label class="label">Time</label>
           <div class="data">{{formatDate(transaction.timestamp_human)}}</div>
         </div>
         <div class="row">
-          <label class="label">哈希</label>
+          <label class="label">Hash</label>
           <div class="data">{{transaction.hash}}</div>
         </div>
         <div class="row">
-          <label class="label">交易类型</label>
+          <label class="label">Transaction Type</label>
           <div class="data">{{transaction.type}}</div>
         </div>
         <div class="row">

@@ -1,9 +1,9 @@
 <template>
-  <a-popover title="交易数据">
+  <a-popover title="Transaction Data">
     <template slot="content">
       <div class="raw-tx">
         <div class="row">
-          <span class="label">哈希</span>
+          <span class="label">Hash</span>
           {{tx.DataHash}}
         </div>
         <div class="row">
@@ -15,7 +15,7 @@
           {{tx.LoadAvgPerCPU}}
         </div>
         <div class="row">
-          <span class="label">内存</span>
+          <span class="label">Sign</span>
           {{tx.Memory}}
         </div>
         <div class="row">
@@ -43,11 +43,11 @@
           {{tx.TargetUser || '-'}}
         </div>
         <div class="row">
-          <span class="label">签名</span>
+          <span class="label">Sign</span>
           <pre>{{JSON.stringify(tx.Signature, null, 2)}}</pre>
         </div>
         <div class="row">
-          <span class="label">签名者</span>
+          <span class="label">Signer</span>
           <pre>{{JSON.stringify(tx.Signee, null, 2)}}</pre>
         </div>
       </div>

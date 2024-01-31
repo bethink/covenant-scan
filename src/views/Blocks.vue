@@ -2,13 +2,13 @@
   <div class="layout">
     <a-breadcrumb class="breadcrumb">
       <a-breadcrumb-item>
-        <router-link to="/">首页</router-link>
+        <router-link to="/">Home</router-link>
       </a-breadcrumb-item>
-      <a-breadcrumb-item>区块列表</a-breadcrumb-item>
+      <a-breadcrumb-item>Block List</a-breadcrumb-item>
     </a-breadcrumb>
     <div class="card txs">
-      <p class="title">区块列表</p>
-      <p>当前已产出区块数量 {{latestHeight}}</p>
+      <p class="title">Block List</p>
+      <p>The current number of blocks produced is {{latestHeight}}</p>
 
       <a-table
         :columns="columns"
@@ -53,36 +53,36 @@ export default class Blocks extends Vue {
   // table columns definition
   private columns = [
     {
-      title: '块高',
+      title: 'Block Height',
       dataIndex: 'height',
       scopedSlots: { customRender: 'height' },
     },
     {
-      title: '交易数',
+      title: 'Number of Transactions',
       dataIndex: 'tx_count',
     },
     {
-      title: '哈希',
+      title: 'Hash',
       dataIndex: 'hash',
       scopedSlots: { customRender: 'toHash' },
     },
     {
-      title: '生产者',
+      title: 'Producer',
       dataIndex: 'producer',
       scopedSlots: { customRender: 'cutHash' },
     },
     {
-      title: '默克尔树根',
+      title: 'Merkel Tree Roots',
       dataIndex: 'merkle_root',
       scopedSlots: { customRender: 'cutHash' },
     },
     {
-      title: '父节点',
+      title: 'Parent Node',
       dataIndex: 'parent',
       scopedSlots: { customRender: 'cutHash' },
     },
     {
-      title: '时间',
+      title: 'Time',
       dataIndex: 'timestamp_human',
       scopedSlots: { customRender: 'date' },
     },

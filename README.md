@@ -6,7 +6,7 @@
 
 ## Background
 
-CovenantScan is CovenantSQL's main chain explorer, mainly provides chain status, block producers status, blocks and transactions, etc. [cqli](https://github.com/CovenantSQL/cql.js) acts as an interactive client for the chain in CovenantScan.
+GuardianScan is GuardianSQL's main chain explorer, mainly provides chain status, block producers status, blocks and transactions, etc. [cqli](https://github.com/GuardianSQL/cql.js) acts as an interactive client for the chain in GuardianScan.
 
 ## Development
 
@@ -16,7 +16,7 @@ For local development:
 
 ## Deployment
 
-CovenantScan now is runing as a single page application host on Github Page, run ship script as following for deployment.
+GuardianScan now is runing as a single page application host on Github Page, run ship script as following for deployment.
 
 ```
 ./ship.sh

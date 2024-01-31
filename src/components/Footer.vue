@@ -1,53 +1,55 @@
 <template>
   <footer class="nav-footer" id="footer">
+    <!--
     <section class="sitemap">
       <router-link to="/">
-        <img svg-inline class="logoicon" src="@/assets/logoicon.svg" alt="covenant-scan-logoicon">
+        <img svg-inline class="logoicon" src="@/assets/logoicon.svg" alt="Guardian-scan-logoicon">
       </router-link>
       <div>
         <h3>Docs</h3>
-        <a href="https://developers.covenantsql.io/docs/intro">Getting Started</a>
-        <a href="https://developers.covenantsql.io/docs/api-json-rpc">API Reference</a>
+        <a href="https://developers.Guardiansql.io/docs/intro">Getting Started</a>
+        <a href="https://developers.Guardiansql.io/docs/api-json-rpc">API Reference</a>
       </div>
       <div>
         <h3>Community</h3>
         <a
-          href="https://stackoverflow.com/search?q=covenantsql"
+          href="https://stackoverflow.com/search?q=Guardiansql"
           target="_blank"
           rel="noreferrer noopener"
         >Stack Overflow</a>
-        <a href="https://gitter.im/CovenantSQL/CovenantSQL">Gitter Chat</a>
-        <a href="https://twitter.com/CovenantLabs" target="_blank" rel="noreferrer noopener">Twitter</a>
+        <a href="https://gitter.im/GuardianSQL/GuardianSQL">Gitter Chat</a>
+        <a href="https://twitter.com/GuardianLabs" target="_blank" rel="noreferrer noopener">Twitter</a>
       </div>
       <div>
         <h3>More</h3>
-        <a href="https://medium.com/@covenant_labs">Blog</a>
+        <a href="https://medium.com/@Guardian_labs">Blog</a>
         <a
           class="github-button"
-          href="https://github.com/CovenantSQL/CovenantSQL"
+          href="https://github.com/GuardianSQL/GuardianSQL"
           data-icon="octicon-star"
-          data-count-href="/CovenantSQL/CovenantSQL/stargazers"
+          data-count-href="/GuardianSQL/GuardianSQL/stargazers"
           data-show-count="true"
           data-count-aria-label="# stargazers on GitHub"
           aria-label="Star this project on GitHub"
         >Star</a>
       </div>
     </section>
-
+    
     <a
-      href="https://covenantsql.io"
+      href="https://Guardiansql.io"
       target="_blank"
       rel="noreferrer noopener"
-      class="covenant-icon"
+      class="Guardian-icon"
     >
       <img
-        src="https://developers.covenantsql.io/img/horizontal_logo.svg"
-        alt="CovenantSQL"
+        src="https://developers.Guardiansql.io/img/horizontal_logo.svg"
+        alt="GuardianSQL"
         width="170"
         height="45"
       >
     </a>
-    <section class="copyright">{{ `Copyright © ${new Date().getFullYear()} Covenant Labs` }}</section>
+    -->
+    <section class="copyright">{{ `Copyright © ${new Date().getFullYear()} Guardian SQL` }}</section>
   </footer>
 </template>
 
@@ -147,14 +149,14 @@ export default class Footer extends Vue {}
 .nav-footer .sitemap h6 > a {
   margin: 0 -10px;
 }
-.nav-footer .covenant-icon {
+.nav-footer .guardian-icon {
   display: block;
   margin: 1em auto;
   opacity: 0.4;
   transition: opacity 0.15s ease-in-out;
   width: 170px;
 }
-.nav-footer .covenant-icon:hover {
+.nav-footer .guardian-icon:hover {
   opacity: 1;
 }
 .nav-footer .copyright {

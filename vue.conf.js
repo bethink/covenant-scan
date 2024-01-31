@@ -7,7 +7,7 @@ module.exports = {
   // https://www.foobar.com/my-app/
   // then change this to '/my-app/'
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/covenant-scan/'
+    ? '/guardian-scan/'
     : '/',
   devServer: {
     host: 'localhost',

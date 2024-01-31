@@ -3,11 +3,11 @@
     <div class="header-row">
       <div class="header-left">
         <router-link to="/">
-          <img svg-inline class="logo" src="@/assets/logo.svg" alt="covenant-scan-logo">
+          <h2 class="logo-text">Guardian <span>SQL </span> <sup>[TestNet]</sup></h2>
         </router-link>
       </div>
       <div class="header-right">
-        <a-input-search class="search" placeholder="交易/区块哈希/区块高度" @search="onSearch"/>
+        <a-input-search class="search" placeholder="Transaction/Block Hash/Block Height" @search="onSearch"/>
         <!-- <span class="lang-dropdown">
           <a-dropdown>
             <a class="lang-selected">简体中文
@@ -65,6 +65,21 @@ export default class Header extends Vue {
   height: 42px;
   margin-bottom: 4px;
   width: auto;
+}
+.logo-text {
+  color: #111;
+  font-size: 32px;
+  font-weight: 700;
+}
+.logo-text span {
+  color: #2249c6;
+}
+.logo-text sup {
+  color: #2249c6;
+  font-size: 13px;
+  vertical-align: top;
+  line-height: inherit;
+  font-weight: 500;
 }
 .header-row {
   line-height: 64px;

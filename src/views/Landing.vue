@@ -1,30 +1,34 @@
 <template>
   <div class="layout">
+    <!--
     <div class="hero">
-      <h3 class="heading">CovenantSQL TestNet 全新上线</h3>
+      <h3 class="heading">GuardianSQL [TestNet]</h3>
     </div>
+    -->
     <div class="card metrics">
+      <!--
       <p class="title">
         全网预览
         <span class="version">v0.3.0</span>
       </p>
+      -->
       <div class="status">
         <div class="status-item">
           <router-link to="/blocks">
-            <label class="name">总区块数</label>
+            <label class="name">Total number of blocks</label>
             <div class="data">{{this.latestHeight || '-'}}</div>
           </router-link>
         </div>
         <div class="status-item">
-          <label class="name">已创建账户数</label>
+          <label class="name">Number of accounts created</label>
           <div class="data">{{this.runningStatus.count_accounts || '-'}}</div>
         </div>
         <div class="status-item">
-          <label class="name">已创建数据库数</label>
+          <label class="name">Number of databases created</label>
           <div class="data">{{this.runningStatus.count_databases || '-'}}</div>
         </div>
         <div class="status-item">
-          <label class="name">每秒查询率(QPS)</label>
+          <label class="name">Query rate per second (QPS)</label>
           <div class="data">{{this.runningStatus.qps || '-'}}</div>
         </div>
       </div>
@@ -32,8 +36,8 @@
     <div class="chain">
       <div class="card blocks">
         <div class="header">
-          <p class="title">最新区块</p>
-          <router-link to="/blocks">查看全部</router-link>
+          <p class="title">Latest Blocks</p>
+          <router-link to="/blocks" class="view-all-btn">View All</router-link>
         </div>
         <div class="wrapper">
           <div v-if="landingBlocks.length" class="recent-blocks">
@@ -42,9 +46,9 @@
                 <div class="height">
                   <router-link :to="'/block/' + block.hash">#{{block.height}}</router-link>
                 </div>
-                <div class="tx-count">交易数：{{block.tx_count}}</div>
+                <div class="tx-count">Number of transactions：{{block.tx_count}}</div>
                 <div class="producer">
-                  <span>生产者：</span>
+                  <span>Producer：</span>
                   <hash-tip :hash="block.producer" :cutLength="10"/>
                 </div>
               </div>
@@ -65,29 +69,29 @@
       </div>
       <div class="card txs">
         <div class="header">
-          <p class="title">最新转账</p>
-          <router-link to="/txs">查看全部</router-link>
+          <p class="title">Latest Transactions</p>
+          <router-link to="/txs" class="view-all-btn">View All</router-link>
         </div>
         <div v-if="landingTxs.length" class="recent-txs">
           <div :key="tx.hash" v-for="tx in landingTxs" class="tx item">
             <div class="left">
               <div class="hash">
-                <span>交易哈希：</span>
+                <span>Transaction hash：</span>
                 <router-link :to="'/tx/' + tx.hash">
                   <hash-tip :hash="tx.hash" :cutLength="20"/>
                 </router-link>
               </div>
               <div class="address">
-                <span>地址：</span>
+                <span>Address：</span>
                 <hash-tip :hash="tx.address" :cutLength="10"/>
               </div>
               <div>
-                <span>类型：</span>
+                <span>Type:</span>
                 {{tx.type}}
               </div>
             </div>
             <div class="right">
-              <div class="block_hash">所在区块：
+              <div class="block_hash">Block:
                 <router-link :to="'/block/' + tx.block_hash">#{{tx.block_height}}</router-link>
               </div>
               <div class="time">{{formatDate(tx.timestamp_human)}}</div>
@@ -189,7 +193,7 @@ export default class Landing extends Vue {
   }
 }
 .metrics {
-  height: 160px;
+  /*height: 160px;*/
   width: 100%;
   margin-bottom: 16px;
 
@@ -249,7 +253,7 @@ export default class Landing extends Vue {
       display: flex;
       padding: 15px 5px;
       justify-content: space-between;
-      border-top: solid 1px #f7ebeb;
+      border-top: solid 1px #e9ecef;
       &:hover {
         background: #f8fcff;
       }
@@ -268,4 +272,8 @@ export default class Landing extends Vue {
     }
   }
 }
+.view-all-btn {
+  font-size: 13px;
+}
+
 </style>

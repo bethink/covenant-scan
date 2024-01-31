@@ -10,7 +10,7 @@ yarn build
 cd dist
 
 # if you are deploying to a custom domain
-echo 'scan.covenantsql.io' > CNAME
+echo 'scan.guardiansql.io' > CNAME
 
 git init
 git add -A
@@ -20,7 +20,7 @@ git commit -m 'ship: deployment'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/CovenantSQL/covenant-scan.git master:gh-pages
+git push -f https://github.com/GuardianSQL/guardian-scan.git master:gh-pages
 
 
 cd -
