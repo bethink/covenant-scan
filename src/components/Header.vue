@@ -3,7 +3,7 @@
     <div class="header-row">
       <div class="header-left">
         <router-link to="/">
-          <h2 class="logo-text">Guardian <span>SQL </span> <sup>[TestNet]</sup></h2>
+          <img svg-inline class="logo" src="@/assets/guardiansql_full_logo.png" alt="Guardian SQL Logo">
         </router-link>
       </div>
       <div class="header-right">
@@ -62,7 +62,7 @@ export default class Header extends Vue {
   max-width: 100%;
 }
 .logo {
-  height: 42px;
+  height: 33px;
   margin-bottom: 4px;
   width: auto;
 }
