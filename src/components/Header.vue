@@ -4,6 +4,7 @@
       <div class="header-left">
         <router-link to="/">
           <img svg-inline class="logo" src="@/assets/guardiansql_full_logo.png" alt="Guardian SQL Logo">
+          <sup class='sup-testnet'>[TestNet]</sup>
         </router-link>
       </div>
       <div class="header-right">
@@ -74,12 +75,13 @@ export default class Header extends Vue {
 .logo-text span {
   color: #2249c6;
 }
-.logo-text sup {
-  color: #2249c6;
+.logo-text sup, .sup-testnet {
+  color: #1e7aff;
   font-size: 13px;
   vertical-align: top;
   line-height: inherit;
   font-weight: 500;
+  padding-left: 5px;
 }
 .header-row {
   line-height: 64px;
