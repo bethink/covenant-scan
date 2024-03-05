@@ -19,6 +19,7 @@
             <div class="data">{{this.latestHeight || '-'}}</div>
           </router-link>
         </div>
+        <!--
         <div class="status-item">
           <label class="name">Number of accounts created</label>
           <div class="data">{{this.runningStatus.count_accounts || '-'}}</div>
@@ -31,6 +32,7 @@
           <label class="name">Query rate per second (QPS)</label>
           <div class="data">{{this.runningStatus.qps || '-'}}</div>
         </div>
+        -->
       </div>
     </div>
     <div class="chain">
